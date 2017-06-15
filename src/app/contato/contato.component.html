@@ -4,7 +4,7 @@
       <div class="card-block">
         <h1 class="card-title">Contato</h1>
         <p class="card-text">Entre em contato conosco! Preencha os campos abaixo e submeta o formulário! </p>
-        <form [formGroup]-"contatoForm" (ngSubmit)-"onSubmit()">
+        <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <input type="text" class="form-control" formControlName="nome" placeholder="nome" required />
           </div>
