@@ -1,14 +1,6 @@
 const express = require('express');
 var app = express();
 
-app.use(express.static(path.join(_dirname, 'dist')));
-
-app.get("*", function (req, res) {
-    res.status(404).send({ error: 'API Not Found' });
-});
-app.listen(process.env.PORT || 3000, function () {
-    console.log('Escutando na porta 3000');
-});
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,7 +13,7 @@ app.post('/api/contato', function (req, res) {
 
 const fs = require('fs');
 const path = require('path');
-const dbFolder = _dirname + '/db';
+const dbFolder = __dirname + '/db';
 const contatosDbPath = dbFolder + '/contatos.json';
 
 // se a pasta db não existir, ele cria
@@ -57,4 +49,13 @@ app.post('/api/contato', function (req, res) {
             res.status(200).json({ success: true });
         });
     }); 
+});
+
+app.use(express.static(path.join(__dirname, 'dist')));
+
+app.get("*", function (req, res) {
+    res.status(404).send({ error: 'API Not Found' });
+});
+app.listen(process.env.PORT || 3000, function () {
+    console.log('Escutando na porta 3000');
 });
