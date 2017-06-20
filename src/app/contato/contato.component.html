@@ -3,6 +3,9 @@
     <div class="card">
       <div class="card-block">
         <h1 class="card-title">Contato</h1>
+        <div *ngFor="let err of listaErros;">
+          <div class="alert alert-danger">{{err.texto}}</div>
+        </div>
         <p class="card-text">Entre em contato conosco! Preencha os campos abaixo e submeta o formulário! </p>
         <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
           <div class="form-group">

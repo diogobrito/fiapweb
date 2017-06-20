@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to find out which attributes exist for node debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Program",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}/dist",
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "port": 9222,
+            "sourceMapPathOverrides": {
+                "webpack:///./*":"${workspaceRoot}\\"
+            } 
+            
+        }
+    ]
+}
