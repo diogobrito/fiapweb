@@ -1,19 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { ContatoComponent } from './contato/contato.component';
-import { ReactiveFormsModule } from '@angular/forms'
-import { Http, Response, RequestOptions, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
+
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { NgZone } from '@angular/core';
+import { HomeComponent } from './home/home.component';
+import { ArtigoComponent } from './artigo/artigo.component';
+import {RouterModule} from '@angular/router';
+import {routes} from './routes';
 
 @NgModule({
-  declarations: [ AppComponent,  ContatoComponent ],
-  imports: [ BrowserModule, ReactiveFormsModule, HttpModule ],
+  declarations: [
+    AppComponent,
+    ContatoComponent,
+    HomeComponent,
+    ArtigoComponent
+  ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

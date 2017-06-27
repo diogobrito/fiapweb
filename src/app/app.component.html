@@ -1,60 +1,29 @@
 <!--The whole content below can be removed with the new code.-->
 <div class="container-fluid">
-  <div class="row" id="main-row">
+  <div class="row">
     <div class="col-md-4 sidebar" id="menu">
       <header>
         <div id="menu-titulo">
-          <h1>Code Britanium</h1>
+          <h1>Dev Tips</h1>
           <h2><i>Aprendendo na Prática</i></h2>
         </div>
-        <nav class="navbar navbar-inverse navbar-toggleable-sm" id="menu-links">
-          <button class="navbar-toggler navbar-toggler-right" type="button"
-              data-toggle="collapse" data-target="#menu-links-interno">
+        <nav class="navbar navbar-inverse navbar-toggleable" id="menu-links">
+          <button class="navbar-toggler <navbar-toggler-></navbar-toggler->right" type="button" data-toggle="collapse" data-target="#menu-links-interno">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand hidden-md-up" href="#">menu</a>
           <div class="navbar-collapse collapse" id="menu-links-interno">
-            <div class="nav-bar">
+            <div class="navbar-nav">
               <a class="nav-item nav-link active" href="#sobre-mim">sobre</a>
-              <a class="nav-item nav-link" href="#artigos">sobre</a>
+              <a class="nav-item nav-link" href="#artigos">artigos</a>
               <a class="nav-item nav-link" href="#contato">contato</a>
             </div>
           </div>
         </nav>
-      </header>
+      </header>  
     </div>
     <div class="col-md-8 offset-md-4" id="conteudo">
-      <article id="sobre-mim" class="row">
-        <div class="com-md-12">
-          <h1>Sobre mim</h1>
-          <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-          </div>
-        </div>
-      </article>
-      <section id="artigos" class="row">
-        <article class="card artigo">
-          <div class="com-md-6">
-            <div class="p-3"></div>
-            <div class="card-block">
-              <h1 class="card-title">Artigo 1</h1>
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button class="btn btn-primary">Ler mais</button>
-            </div>
-          </div>
-        </article>
-        <article class="card artigo">
-          <div class="com-md-6">
-            <div class="p-3"></div>
-            <div class="card-block">
-              <h1 class="card-title">Artigo 2</h1>
-              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <button class="btn btn-primary">Ler mais</button>
-            </div>
-          </div>
-        </article>
-      </section>
-      <app-contato></app-contato>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

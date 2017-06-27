@@ -1,0 +1,26 @@
+
+  <article id="sobre-mim" class="row">
+    <div class="col-md-12">
+      <h1>Sobre mim</h1>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum magna vel lacus aliquet condimentum. Curabitur dictum nisl a nisi placerat vestibulum. Proin porta vehicula commodo. Mauris vitae venenatis diam. Ut elementum, erat pulvinar ultrices tempor, sem sapien viverra arcu, eu tempor magna lorem vel lectus. Mauris blandit ante maximus, lacinia magna a, tincidunt turpis. Donec sed magna non leo pretium aliquet. Donec dignissim cursus nulla. Cras non tristique neque. Nunc auctor augue urna, non suscipit ipsum vehicula id. Sed sit amet arcu est. Nulla scelerisque maximus sapien, sed malesuada felis pulvinar in. Aliquam lacinia, justo et suscipit faucibus, purus dui pharetra nisi, ac dapibus nunc erat et leo. In at tortor ut orci tempor eleifend et nec nulla.
+        maximus sapien, sed malesuada felis pulvinar in. Aliquam lacinia, justo et suscipit faucibus, purus dui pharetra nisi, ac dapibus nunc erat et leo. In at tortor ut orci tempor eleifend et nec nulla.
+        maximus sapien, sed malesuada felis pulvinar in. Aliquam lacinia, justo et suscipit faucibus, purus dui pharetra nisi, ac dapibus nunc erat et leo. In at tortor ut orci tempor eleifend et nec nulla.
+        maximus sapien, sed malesuada felis pulvinar in. Aliquam lacinia, justo et suscipit faucibus, purus dui pharetra nisi, ac dapibus nunc erat et leo. In at tortor ut orci tempor eleifend et nec nulla.
+        maximus sapien, sed malesuada felis pulvinar in. Aliquam lacinia, justo et suscipit faucibus, purus dui pharetra nisi, ac dapibus nunc erat et leo. In at tortor ut orci tempor eleifend et nec nulla. 
+      </div>
+    </div>  
+  </article>
+  <section id="artigos" class="row">
+    <div class="col-md-6" *ngFor="let artigo of artigos;">
+      <div class="p-3"></div>
+      <article class="card artigo">
+        <div class="card-block">
+          <h2 class="card-title">{{artigo.titulo}}</h2>
+          <p class="card-text">{{artigo.resumo}}</p>
+          <button class="btn btn-primary" [routerLink]="['/artigo', artigo.id]"> Ler mais...</button>
+        </div>
+      </article>
+    </div>
+  </section>
+  <app-contato></app-contato>
